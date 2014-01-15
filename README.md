@@ -8,4 +8,4 @@ http://blowmage.com/minitest-rails/
 http://blowmage.com/minitest-rails-capybara/
 https://github.com/ivanoats/portfolio
 
-![ScreenShot](http://imgur.com/yhIoEcE)
+![ScreenShot](http://imgur.com/yhIoEcE.png)
