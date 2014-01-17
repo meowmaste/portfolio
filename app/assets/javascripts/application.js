@@ -12,5 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require_tree ../../../vendor/assets/javascripts/zurb/
 //= require turbolinks
 //= require_tree .
+
+$(function(){ $(document).foundation(); });

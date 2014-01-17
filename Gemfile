@@ -28,6 +28,7 @@ gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
+gem "foundation-rails", github: "codefellows/foundation-rails"
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -36,6 +37,7 @@ end
 
 group :test do
   gem "minitest-rails-capybara"
+  gem "launchy"
 end
 
 # Use ActiveModel has_secure_password
