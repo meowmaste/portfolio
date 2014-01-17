@@ -6,7 +6,7 @@ gem "minitest-rails"
 gem 'rails', '4.0.2'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'sqlite3', group: :development
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -30,6 +30,10 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem "foundation-rails", github: "codefellows/foundation-rails"
 
+gem 'rails_12factor', group: :production
+
+gem 'pg', group: :production
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
@@ -51,3 +55,4 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+ruby "2.1.0"
