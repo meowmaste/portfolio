@@ -1,3 +1,10 @@
 language: ruby
 rvm:
-  - 2.1.0
+- 2.1.0
+deploy:
+  provider: heroku
+  api_key:
+    secure: Pf29wgseNHu36QrfkeTFndCdSWZ7VQYsZJKfrSULdyPc9bgsIoXO74ZSemUEo6osTX/pbvH+cxFvAsJ/4luOWa9GH5gzlHC7Iy/pq3EXN7Prq9DWHEVkaeq8uJwKmycbX17KrXOGJPqWnHCparzVjUFxeWdEJcgDcVYVXSV0gDc=
+  app: joslyn-portfolio
+  on:
+    repo: meowmaste/portfolio
