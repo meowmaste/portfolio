@@ -8,7 +8,6 @@ feature "Check For Zurb" do
     visit root_path
 
     #Then
-    puts page.body
     page.body.must_include "columns"
 
   end

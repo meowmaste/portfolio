@@ -4,7 +4,6 @@ feature "CanAccessHome" do
   scenario "the test is sound" do
     # visit root_path
     visit "/"
-    page.must_have_content "Welcome aboard"
-    page.wont_have_content "Goobye All!"
+    page.must_have_content "Welcome"
   end
 end

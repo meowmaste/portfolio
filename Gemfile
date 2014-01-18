@@ -42,6 +42,7 @@ end
 group :test do
   gem "minitest-rails-capybara"
   gem "launchy"
+  gem "rake"
 end
 
 # Use ActiveModel has_secure_password
@@ -55,4 +56,4 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-ruby "2.0.0"
+ruby "2.1.0"
