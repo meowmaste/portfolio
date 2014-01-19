@@ -12,8 +12,28 @@
     <%= csrf_meta_tags %>
   </head>
 
-  <body>
-  	<div class="columns large-8">
+  <body class="<%= controller.controller_name %>">
+    <nav class ="top-bar">
+      <ul class="title-area">
+        <li class="name">
+          <h1 id="nav-name">Joslyn Rosbrook</h1>
+        </li>
+      </ul>
+     <section class="top-bar-section">
+        <ul class="right">
+          <li class="divider"></li>
+          <li><%= link_to "About", "#" %></li>
+          <li class="divider"></li>
+          <li><%= link_to "Blog", "#" %></li>
+          <li class="divider"></li>
+          <li><%= link_to "Projects", "#" %></li>
+          <li class="divider"></li>
+          <li><%= link_to "Contact Me", "#" %></li>
+        </ul>
+      </div>
+    </nav>
+  	
+    <div class="columns large-8">
     	<%= yield %>
     </div>
   </body>

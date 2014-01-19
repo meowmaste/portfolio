@@ -31,7 +31,7 @@
 // $include-html-grid-classes: $include-html-classes;
 
 // $row-width: rem-calc(1000);
-// $column-gutter: rem-calc(30);
+$column-gutter: rem-calc(60px);
 // $total-columns: 12;
 
 // We use these to control various global styles
@@ -1012,7 +1012,7 @@
 // $include-html-top-bar-classes: $include-html-classes;
 
 // Background color for the top bar
-// $topbar-bg-color: #333;
+$topbar-bg-color: #3CB0B0 !default;
 // $topbar-bg: $topbar-bg-color;
 
 // Height and margin
