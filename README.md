@@ -10,6 +10,6 @@ https://github.com/ivanoats/portfolio
 Railscasts #417
 
 
-![ScreenShot](http://i.imgur.com/qzbjLX3.png)
+![ScreenShot](http://imgur.com/XOS4n7w.png)
 
 [![Build Status](https://travis-ci.org/meowmaste/portfolio.png?branch=master)](https://travis-ci.org/meowmaste/portfolio)
