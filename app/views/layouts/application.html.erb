@@ -12,7 +12,7 @@
     <%= csrf_meta_tags %>
   </head>
 
-  <body class="<%= controller.controller_name %>">
+  <body>
     <nav class ="top-bar">
       <ul class="title-area">
         <li class="name">
@@ -24,7 +24,7 @@
           <li class="divider"></li>
           <li><%= link_to "About", "#" %></li>
           <li class="divider"></li>
-          <li><%= link_to "Blog", "#" %></li>
+          <li><%= link_to "Blog", posts_path %></li>
           <li class="divider"></li>
           <li><%= link_to "Projects", "#" %></li>
           <li class="divider"></li>

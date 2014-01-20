@@ -1,0 +1,94 @@
+<script type="text/javascript">
+  	var $window = $(window);
+    function createComet() {
+        var top = $window.scrollTop()+$window.height();
+        var $comet = $("<div class='flying-comet'></div>");
+        var left = (Math.random() * $window.width())-200;
+        $comet.css({top:top, left: left});
+        $('body').append($comet);
+    }
+    function updateComets() {
+      var pageWidth = $window.width();
+      var scrolloffset = $window.scrollTop();
+
+      $('.flying-comet').each(function(i, comet) {
+        var $comet = $(comet);
+        var left = parseInt($comet.css('left'),10)
+        var top = parseInt($comet.css('top'),10)
+        $comet.css({left: (left + 10), top: (top-10) });
+
+        if( left > pageWidth || top + 300 < scrolloffset) {
+          $comet.remove();
+        }
+      })
+
+      setTimeout(updateComets, 10)
+    }
+  	$( function(){
+  		$.stellar();
+  		updateComets();
+  		$(document).click(createComet);
+  	})
+  </script>
+	<div id="sun">
+		<div class="topsun">
+			<%= image_tag "solarsystem/sun.png" %>
+		</div>
+		<p>The sun is by far the largest object in the solar system. It contains more than 99.8% of the total mass of the solar system!</p>
+	</div>
+	<div id="mercury">
+		<div class="rightplanet">
+			<%= image_tag "solarsystem/mercury.png" %>
+		</div>
+		<p>Mercury takes less than 88 Earth days to orbit the sun yet it rotates slowly on its axis. One complete rotation takes 59 Earth days. Therefore, the interval between one sunrise and the next lasts about 180 Earth days!</p>
+	</div>
+	<div id="venus">
+		<div class="leftplanet">
+			<%= image_tag "solarsystem/venus.png" %>
+		</div>
+		<p>Venus rotates so slowly that it orbits the sun faster than it can make one axis rotation.</p>
+	</div>
+	<div id="earth">
+		<div class="rightplanet">
+			<%= image_tag "solarsystem/earth.png" %>
+		</div>
+		<p>Earth is the only planet on which water can exist in liquid form on the surface. Its only satellite, the moon, is the only extraterrestrial body to have been visited by humans.</p>
+	</div>
+	<div id="mars">
+		<div class="leftplanet">
+			<%= image_tag "solarsystem/mars.png" %>
+		</div>
+		<p>The tallest volcano in the solar system named Olympus Mons is on Mars and it is 15 miles high which is three times the height of Mount Everest (Earth's largest).</p>
+	</div>
+	<div id="asteroids">
+	</div>
+	<div id="jupiter">
+		<div class="rightplanet">
+			<%= image_tag "solarsystem/jupiter.png" %>
+		</div>
+		<p>Jupiter has a storm called The Great Red Spot that has been going on for over 300 years. You can fit 300 Earths into The Great Red Spot.</p>
+	</div>
+	<div id="saturn">
+		<div class="leftplanet">
+			<%= image_tag "solarsystem/saturn.png" %>
+		</div>
+		<p>Saturn's rings are made up of billions of pieces of dust and rock.</p>
+	</div>
+	<div id="uranus">
+		<div class="rightplanet">
+			<%= image_tag "solarsystem/uranus.png" %>
+		</div>
+		<p>Uranus' tilt of its rotational axis is almost perpendicular to the plane of the ecliptic, which means it alternately has its north pole and south pole turned towards the sun.</p>
+	</div>
+	<div id="neptune">
+		<div class="leftplanet">
+			<%= image_tag "solarsystem/neptune.png" %>
+		</div>
+		<p>Neptune is 30 times farther from the sun as is the Earth. It goes around the sun once every 165 Earth years. </p>
+	</div>
+	<div id="pluto">
+		<div class="rightplanet">
+			<%= image_tag "solarsystem/pluto.png" %>
+		</div>
+		<p>Pluto may no longer be classified as a planet BUT it is still the tenth largest body orbiting the sun.</p>
+	</div>
