@@ -13,6 +13,7 @@
   </head>
 
   <body>
+
     <nav class ="top-bar">
       <ul class="title-area">
         <li class="name">
@@ -36,5 +37,12 @@
     <div class="columns large-8">
     	<%= yield %>
     </div>
+
+    <% flash.each do |key, value| %>
+        <div class="alert-box round <%= flash_class(key) %>">
+              <%= value %>
+        </div>
+    <% end %>
+
   </body>
 </html>
