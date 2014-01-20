@@ -8,7 +8,7 @@ feature "Check For Zurb" do
     visit root_path
 
     #Then
-    page.body.must_include "columns"
+    page.source.must_include("foundation_and_overrides.css")
 
   end
 end
