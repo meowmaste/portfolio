@@ -1,0 +1,7 @@
+portfolio:
+    name: what meta
+    technologies_used: Ruby, Rails, Foundation
+
+freelance:
+    name: solar system
+    technologies_used: HTML, CSS, JavaScript
