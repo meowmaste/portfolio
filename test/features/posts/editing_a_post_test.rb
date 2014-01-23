@@ -2,8 +2,10 @@ require "test_helper"
 
 feature "Editing A Post" do
   scenario "submit updates to existing post" do
+    sign_in
     #Given an existing post
-    post = Post.create(title: "Becoming a Code Fellow", body: "Means striving for excellence.")
+    post = Post.create(title: "Becoming a Code Fellow", body: "Means striving for excellence.", author_id: users(:user1).id)
+    
     visit post_path(post)
 
     #When edit button is clicked and data is submitted

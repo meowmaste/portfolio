@@ -8,6 +8,7 @@
 
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
+    <%= javascript_include_tag "rails" %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
   </head>
@@ -30,6 +31,19 @@
           <li><%= link_to "Projects", projects_path %></li>
           <li class="divider"></li>
           <li><%= link_to "Contact Me", "#" %></li>
+          <li class="divider"></li>
+          <% if user_signed_in? %>
+            <li>
+            <%= link_to 'Log Out', destroy_user_session_path, :method => :delete %>
+            </li>
+          <% else %>
+            <li>
+            <%= link_to 'Sign Up', new_user_registration_path %>
+            </li>
+            <li>
+            <%= link_to 'Log In', new_user_session_path %>
+            </li>
+          <% end %>
         </ul>
       </div>
     </nav>
