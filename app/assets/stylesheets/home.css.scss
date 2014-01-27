@@ -9,6 +9,11 @@ body {
 h1 {
 	text-shadow: 2px 2px black;
 }
+
+h3 {
+	padding: 30px;
+	font-weight: bold;
+}
 nav {
 	box-shadow: 0 2px 10px;
 }
@@ -25,11 +30,17 @@ nav {
 	font-weight: bold;
 }
 
-a.button:visited, .button {
-	background-color: black;
-	color: white;
+nav {
+	a.button:visited, .button {
+		background-color: black;
+		color: white;
+	}
+	a.button:hover, .button:hover {
+		background-color: white;
+		color: black;
+	}
 }
-a.button:hover, .button:hover {
-	background-color: white;
-	color: black;
+
+#font-awesome-wrapper {
+	text-align: center;
 }
