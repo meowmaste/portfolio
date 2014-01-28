@@ -5,3 +5,13 @@ user1:
 user2:
   email: user2@mysite.com
   encrypted_password: <%= User.new.send(:password_digest, "user2") %>
+
+author:
+  email: author@mysite.com
+  encrypted_password: <%= User.new.send(:password_digest, "password") %>
+  role: author
+
+editor:
+  email: editor@mysite.com
+  encrypted_password: <%= User.new.send(:password_digest, "password") %>
+  role: editor

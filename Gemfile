@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'minitest-rails'
 gem 'devise'
 gem 'font-awesome-rails'
+gem "pundit"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
@@ -45,6 +46,7 @@ group :test do
   gem "minitest-rails-capybara"
   gem "launchy"
   gem "rake"
+  gem "simplecov"
 end
 
 # Use ActiveModel has_secure_password
