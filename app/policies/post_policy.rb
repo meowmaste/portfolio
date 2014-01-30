@@ -5,6 +5,15 @@ PostPolicy = Struct.new(:user, :post) do
   end
 
   def publish?
-  	user.role == "editor"
+  	user.editor?
   end
+
+  def update?
+  	user && (user.editor? || post.author = user)
+  end
+
+  def delete?
+  	user && user.editor?
+  end
+
 end

@@ -7,5 +7,11 @@ cr:
 http:
   title: Intro to HTTP
   body: It's all about the request-response cycle
-  author: user2
+  author: author
   published: true
+
+postgres:
+  title: PostgreSQL
+  body: It's better than SQLite
+  author: editor
+  published: false 

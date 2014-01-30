@@ -4,7 +4,15 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all
+    if user_signed_in?
+      if current_user.editor?
+        @posts = Post.all 
+      else
+        @posts = Post.where(author: current_user)
+      end
+    else
+      @posts = Post.where(published: true)
+    end
   end
 
   # GET /posts/1
