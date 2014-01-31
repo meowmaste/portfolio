@@ -10,9 +10,11 @@ feature "creating and approving comments to blog posts" do
 
   scenario "As an author or editor I want to approve comments so that my blog does not have spam comments" do
   	sign_in(:author)
-  	visit posts_path(posts(:http))
-  	click_on "Approve Comment"
-  	page.text.must_include "The comment has been saved"
+  	visit post_path(posts(:http))
+    fill_in "Content", with: "What a cool post!"
+    click_on "Create Comment"
+  	click_on "Approve"
+  	page.text.must_include "Comment approved."
   end 
 
 end

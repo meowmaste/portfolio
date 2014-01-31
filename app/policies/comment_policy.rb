@@ -1,7 +1,7 @@
 CommentPolicy = Struct.new(:user, :comment) do
   self::Scope = Struct.new(:user, :scope) do
       def resolve
-        if user.author? || user.editor?
+        if user && (user.author? || user.editor?)
           scope.all
         else
           scope.where(approved: true)

@@ -22,7 +22,7 @@ class CommentsController < ApplicationController
   def approve
     authorize @comment, :approve?
     @comment.approve!
-    redirect_to @comment.post
+    redirect_to @comment.post, notice: 'Comment approved.' 
   end
 
   def update
