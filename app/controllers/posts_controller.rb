@@ -19,6 +19,7 @@ class PostsController < ApplicationController
   # GET /posts/1.json
   def show
     @comment = @post.comments.new
+    @comments = policy_scope(Comment).where(post: @post)
   end
 
   # GET /posts/new

@@ -20,6 +20,15 @@
 	<%= @post.published? ? "Published" : "Unpublished" %>
 </p>
 
+<h1>Comments</h1>
+<% @comments.each do |c| %>
+<p> <%= c.content %>
+	<% unless c.approved? %>
+	<%= link_to "Approve", approve_post_comment_path(@post, c), method: :post %>
+	<% end %>
+
+</p>
+<% end %>
 <%= render "comments/form" %>
 
 <%= link_to 'Edit', edit_post_path(@post) %> |
