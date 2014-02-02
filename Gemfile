@@ -3,7 +3,9 @@ source 'https://rubygems.org'
 gem 'minitest-rails'
 gem 'devise'
 gem 'font-awesome-rails'
-gem "pundit"
+gem 'pundit'
+gem 'omniauth-twitter'
+gem 'figaro'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'

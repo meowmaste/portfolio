@@ -10,7 +10,7 @@ feature "as a site visitor, I want to be able to sign up for an account so that 
     fill_in "Email", with: "test@example.com"
     fill_in "Password", with: "password"
     fill_in "Password confirmation", with: "password"
-    click_on "Sign up"
+    click_button "Sign up"
 
     #Then I should be signed up
     page.must_have_content "Welcome! You have signed up successfully"

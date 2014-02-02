@@ -286,8 +286,23 @@
         2,
         null,
         null
+      ],
+      "/Users/joslynrosbrook/Desktop/CodeFellows/portfolio/app/controllers/omniauth_callbacks_controller.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        0,
+        0,
+        null,
+        null,
+        1,
+        null
       ]
     },
-    "timestamp": 1391142060
+    "timestamp": 1391323955
   }
 }
