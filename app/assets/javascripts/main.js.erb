@@ -185,8 +185,8 @@ function reset() {
     gameOver = false;
     score = 0;
     credits.renderable = true;
-    scoreText.setText("Ploppy Kitty?");
-    instText.setText("CLICK TO START\nPLOPPY KITTY");
+    scoreText.setText("Ploppy Cat?");
+    instText.setText("CLICK TO START\nPLOPPY CAT");
     gameOverText.renderable = false;
     birdie.body.allowGravity = false;
     birdie.angle = 0;
@@ -294,7 +294,7 @@ function addScore(_, inv) {
 
 function setGameOver() {
     gameOver = true;
-    instText.setText("TOUCH KITTY\nTO TRY AGAIN");
+    instText.setText("CLICK CAT\nTO TRY AGAIN");
     instText.renderable = true;
     var hiscore = window.localStorage.getItem('hiscore');
     hiscore = hiscore ? hiscore : score;
