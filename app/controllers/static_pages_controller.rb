@@ -4,4 +4,7 @@ class StaticPagesController < ApplicationController
 
 	def contact_me
 	end 
+
+	def ploppy_cat
+	end
 end
