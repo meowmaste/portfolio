@@ -20,7 +20,7 @@
 	<%= @post.published? ? "Published" : "Unpublished" %>
 </p>
 
-<h1>Comments</h1>
+<h3>Comments:</h3>
 <% @comments.each do |c| %>
 <p> <%= c.content %>
 	<% unless c.approved? %>
