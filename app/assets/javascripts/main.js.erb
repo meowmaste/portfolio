@@ -49,7 +49,9 @@ function preload() {
         },
         image: {
             finger: ['<%= image_path("finger.png") %>'],
-            fence: ['<%= image_path("fence.png") %>']
+            fence: ['<%= image_path("fence.png") %>'],
+            spaceBg: ['<%= image_path("space.jpg") %>'],
+
         },
         audio: {
             flap: ['<%= image_path("meow.wav") %>'],
@@ -91,9 +93,12 @@ function create() {
     game.world.height = screenHeight;
     // Draw bg
     bg = game.add.graphics(0, 0);
-    bg.beginFill(0x3F1E5E, 1);
-    bg.drawRect(0, 0, game.world.width, game.world.height);
-    bg.endFill();
+
+    background = game.add.tileSprite(0, 0, game.world.width, game.world.height, "spaceBg");
+
+    //bg.beginFill(0x3F1E5E, 1);
+    //bg.drawRect(0, 0, game.world.width, game.world.height);
+    //bg.endFill();
     // Credits 'yo
     credits = game.add.text(
         game.world.width / 2,
