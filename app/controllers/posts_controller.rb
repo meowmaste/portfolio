@@ -8,7 +8,7 @@ class PostsController < ApplicationController
       if current_user.editor?
         @posts = Post.all 
       else
-        @posts = Post.where(author: current_user)
+        @posts = Post.where("author_id = ? or published = ?", current_user.id, true)
       end
     else
       @posts = Post.where(published: true)
