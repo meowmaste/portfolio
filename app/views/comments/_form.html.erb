@@ -1,22 +1,7 @@
-<%= form_for([@post, @comment]) do |f| %>
-  <div class="field">
-    <%= f.label :author, "Name" %><br>
-    <%= f.text_field :author %>
-  </div>
-    <div class="field">
-    <%= f.label :author_url, "URL" %><br>
-    <%= f.text_field :author_url %>
-  </div>
-    <div class="field">
-    <%= f.label :author_email, "Email" %><br>
-    <%= f.text_field :author_email %>
-  </div>
-  <div class="field">
-    <%= f.label :content %><br>
-    <%= f.text_field :content %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+<%= simple_form_for([@post, @comment]) do |f| %>
+  <%= f.input :author %>
+  <%= f.input :author_url %>
+  <%= f.input :author_email %>
+  <%= f.input :content %>
+  <%= f.button :submit %>
 <% end%>
