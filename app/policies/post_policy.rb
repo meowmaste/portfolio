@@ -1,7 +1,7 @@
 PostPolicy = Struct.new(:user, :post) do
 
   def create?
-  	user.role == "author" || user.role == "editor"
+  	user && (user.role == "author" || user.role == "editor")
   end
 
   def publish?

@@ -1,3 +1,9 @@
+$( function() {
+
+if ($("#screen").length === 0) {
+    return false;
+}
+
 var DEBUG = false;
 var SPEED = 450;
 var GRAVITY = 40;
@@ -44,7 +50,7 @@ var game = new Phaser.Game(
 function preload() {
     var assets = {
         spritesheet: {
-            birdie: ['<%= image_path("birdie.png") %>', 24, 24],
+            birdie: ['<%= image_path("birdie.png") %>', 24, 16],
             clouds: ['<%= image_path("clouds.png") %>', 128, 64]
         },
         image: {
@@ -409,3 +415,4 @@ function render() {
 }
 
 };
+});
