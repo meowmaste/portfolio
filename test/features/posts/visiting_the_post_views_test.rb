@@ -12,12 +12,12 @@ feature "Visiting The Post Views" do
     page.text.must_include "Becoming a Code Fellow"
   end
 
-  scenario "as an author, I want to only see my own posts so that I can focus on my work" do
+  scenario "as an author, I want to see my work and that of others that are published" do
   	Post.create(title: "Becoming a unicorn", body: "Means growing one horn.", author: users(:author))
   	sign_in(:author)
   	visit posts_path
-	page.text.must_include "Becoming a unicorn"
-  	page.wont_have_content "I learned web development!"
+	  page.text.must_include "Becoming a unicorn"
+  	page.text.must_include "I learned web development!"
   end 
 
   scenario "as an editor, I want to see all posts regardless of published status in the blog index so I can choose which to publish" do

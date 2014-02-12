@@ -90,6 +90,9 @@
         null,
         1,
         null,
+        null,
+        1,
+        null,
         null
       ],
       "/Users/joslynrosbrook/Desktop/CodeFellows/portfolio/app/controllers/posts_controller.rb": [
@@ -183,7 +186,7 @@
         1,
         null,
         1,
-        0,
+        9,
         null,
         null,
         1,
@@ -191,11 +194,11 @@
         null,
         null,
         1,
-        20,
+        22,
         null,
         null,
         1,
-        20,
+        22,
         null,
         null,
         null
@@ -303,6 +306,6 @@
         null
       ]
     },
-    "timestamp": 1391323955
+    "timestamp": 1392180621
   }
 }
