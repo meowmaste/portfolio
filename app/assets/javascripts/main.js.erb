@@ -1,3 +1,9 @@
+$( function() {
+
+if ($("#screen").length === 0) {
+    return false;
+}
+
 var DEBUG = false;
 var SPEED = 450;
 var GRAVITY = 40;
@@ -409,3 +415,4 @@ function render() {
 }
 
 };
+});
