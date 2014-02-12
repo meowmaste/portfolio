@@ -53,16 +53,19 @@
         Logged in as <strong><%= current_user.email %></strong>.
       <% end %>
     </div>
-  	
+
+    <% flash.each do |key, value| %>
+        <div class="alert-box <%= flash_class(key) %>">
+              <%= value %>
+        </div>
+    <% end %>
+
+      	
     <div class="columns large-8">
     	<%= yield %>
     </div>
 
-    <% flash.each do |key, value| %>
-        <div class="alert-box round <%= flash_class(key) %>">
-              <%= value %>
-        </div>
-    <% end %>
+
 
   </body>
 </html>
