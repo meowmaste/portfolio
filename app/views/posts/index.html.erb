@@ -13,6 +13,7 @@
 
   <tbody>
     <% @posts.each do |post| %>
+      <span class="timestamp">at <%= l post.created_at %></span>
       <tr>
         <td><%= post.title %></td>
         <td><%= post.body %></td>

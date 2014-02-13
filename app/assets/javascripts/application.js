@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require foundation
+//= require browser_timezone_rails/application.js
 //= require_tree .
 
 $(function(){ $(document).foundation(); });

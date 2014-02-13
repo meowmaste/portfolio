@@ -2,16 +2,14 @@
   <%= f.input :title %>
   <%= f.input :body %>
   <%= f.button :submit %>
-
-    <% if policy(@post).publish? %>
+  <% if policy(@post).publish? %>
     <div class="row collapse">
-      <div class="small-3 columns">
-        <%= f.label :published, class: "right inline", title: "Is this post published?", data: {tooltip: true } %><br>
-      </div>
-
-      <div class="small-9 columns">
-        <%= f.check_box :published %>
-      </div>
+    <div class="small-3 columns">
+      <%= f.label :published, class: "right inline", title: "Is this post published?", data: {tooltip: true } %><br>
     </div>
+    <div class="small-9 columns">
+      <%= f.check_box :published %>
+    </div>
+  </div>
   <% end %>
 <% end %>
