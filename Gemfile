@@ -13,9 +13,10 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
-gem "foundation-rails", github: "codefellows/foundation-rails"
-gem "simple_form"
-gem "browser-timezone-rails", "~> 0.0.7"
+gem 'foundation-rails', github: "codefellows/foundation-rails"
+gem 'simple_form'
+gem 'browser-timezone-rails', "~> 0.0.7"
+gem 'draper', '~> 1.3'
 
 gem 'sqlite3', group: :development
 

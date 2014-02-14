@@ -16,7 +16,7 @@
       <span class="timestamp">at <%= l post.created_at %></span>
       <tr>
         <td><%= post.title %></td>
-        <td><%= post.body %></td>
+        <td><%= post.intro %></td>
         <td><%= link_to 'Show', post %></td>
         <td>
           <% if policy(post).update? %>

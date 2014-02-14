@@ -6,12 +6,12 @@ class PostsController < ApplicationController
   def index
     if user_signed_in?
       if current_user.editor?
-        @posts = Post.all 
+        @posts = Post.all.decorate
       else
-        @posts = Post.where("author_id = ? or published = ?", current_user.id, true)
+        @posts = Post.where("author_id = ? or published = ?", current_user.id, true).decorate
       end
     else
-      @posts = Post.where(published: true)
+      @posts = Post.where(published: true).decorate
     end
   end
 
