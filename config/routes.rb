@@ -10,6 +10,9 @@ Portfolio::Application.routes.draw do
   end
   resources :projects
 
+  scope ":locale" do
+  end 
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

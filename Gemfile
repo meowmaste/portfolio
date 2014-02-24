@@ -17,6 +17,7 @@ gem 'foundation-rails', github: "codefellows/foundation-rails"
 gem 'simple_form'
 gem 'browser-timezone-rails', "~> 0.0.7"
 gem 'draper', '~> 1.3'
+gem 'carrierwave'
 
 gem 'sqlite3', group: :development
 

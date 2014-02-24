@@ -1,5 +1,6 @@
-<%= simple_form_for(@project, remote: true) do |f| %>
+<%= simple_form_for(@project, remote: true, :html => {:multipart => true}) do |f| %>
   <%= f.input :name %>
   <%= f.input :technologies_used %>
+  <%= f.file_field :image %>
   <%= f.button :submit %>
 <% end %>
