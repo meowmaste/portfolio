@@ -1,4 +1,4 @@
-<%= simple_form_for([@post, @comment]) do |f| %>
+<%= simple_form_for([commentable, @comment]) do |f| %>
   <%= f.input :author %>
   <%= f.input :author_url %>
   <%= f.input :author_email %>

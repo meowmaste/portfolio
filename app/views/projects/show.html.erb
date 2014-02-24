@@ -4,3 +4,11 @@
 <div>
   <%= image_tag @project.image_url(:thumb).to_s %>
 </div>
+
+<h3>Comments:</h3>
+<% @comments.each do |c| %>
+<p> <%= c.content %>
+
+</p>
+<% end %>
+<%= render "comments/form", commentable: @project %>

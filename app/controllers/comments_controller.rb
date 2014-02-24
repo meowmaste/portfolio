@@ -1,20 +1,19 @@
 class CommentsController < ApplicationController
   before_action :set_comment, only: [:approve, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:create]
+  before_action :load_commentable , only: [:create]
 
   def edit
   end
 
   def create
-    @post = Post.find(params[:post_id])
-    @comment = @post.comments.new(comment_params)
-    
+    @comment = @commentable.comments.new(comment_params)
 
     respond_to do |format|
       if @comment.save
-        format.html { redirect_to @post, notice: 'Comment was successfully created.' }
+        format.html { redirect_to @commentable, notice: 'Comment was successfully created.' }
       else
-        format.html { redirect_to @post, notice: 'Comment could not be created. Sorry.' }
+        format.html { redirect_to @commentable, notice: 'Comment could not be created. Sorry.' }
       end
     end
   end
@@ -52,5 +51,10 @@ class CommentsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def comment_params
       params.require(:comment).permit(:content, :author, :author_url, :author_email)
+    end
+
+    def load_commentable
+      resource, id = request.path.split('/')[1, 2]
+      @commentable = resource.singularize.classify.constantize.find(id)
     end
 end

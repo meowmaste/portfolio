@@ -8,7 +8,14 @@ Portfolio::Application.routes.draw do
       end
     end
   end
-  resources :projects
+  
+  resources :projects do 
+    resources :comments do
+      member do
+        post "approve"
+      end
+    end
+  end 
 
   scope ":locale" do
   end 
