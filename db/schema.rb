@@ -13,6 +13,21 @@
 
 ActiveRecord::Schema.define(version: 20140224050256) do
 
+  create_table "comments", force: true do |t|
+    t.string   "author"
+    t.string   "author_url"
+    t.string   "author_email"
+    t.string   "user_ip"
+    t.string   "user_agent"
+    t.string   "referrer"
+    t.text     "content"
+    t.boolean  "approved"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "commentable_type"
+    t.integer  "commentable_id"
+  end
+
   create_table "posts", force: true do |t|
     t.string   "title"
     t.text     "body"

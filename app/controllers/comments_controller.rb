@@ -21,21 +21,21 @@ class CommentsController < ApplicationController
   def approve
     authorize @comment, :approve?
     @comment.approve!
-    redirect_to @comment.post, notice: 'Comment approved.' 
+    redirect_to @comment.commentable, notice: 'Comment approved.' 
   end
 
   def update
     respond_to do |format|
       if @comment.update(comment_params)
-        format.html { redirect_to @comment.post, notice: 'Comment was successfully updated.' }
+        format.html { redirect_to @comment.commentable, notice: 'Comment was successfully updated.' }
       else
-        format.html { redirect_to @comment.post, notice: 'Comment could not be updated.' }
+        format.html { redirect_to @comment.commentable, notice: 'Comment could not be updated.' }
       end
     end
   end
 
   def destroy
-  	@post = @comment.post
+  	@post = @comment.commentable
     @comment.destroy
     respond_to do |format|
       format.html { redirect_to @post }

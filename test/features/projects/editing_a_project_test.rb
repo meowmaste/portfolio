@@ -21,8 +21,7 @@ feature "As the site owner, I want to edit a project so that I can correct typos
   	fill_in "Name", with: "Err"
   	click_on "Update Project"
   	#Then the changes should be saved and shown
-  	page.text.must_include "prohibited"
-  	page.text.must_include "Name is too short" 
+  	page.text.must_include "too short" 
   	
   end
 end
