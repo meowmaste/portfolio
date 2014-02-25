@@ -28,5 +28,15 @@ module Portfolio
       g.test_framework :mini_test, :spec => true, :fixture => false
     end
 
+    config.action_mailer.smtp_settings = {
+      address: "smtp.gmail.com",
+      port: 587,
+      domain: "joslynrosbrook.com",
+      authentication: "plain",
+      enable_starttls_auto: true,
+      user_name: ENV["GMAIL_USERNAME"],
+      password: ENV["GMAIL_PASSWORD"]
+    }
+
   end
 end
