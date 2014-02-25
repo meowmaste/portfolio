@@ -13,9 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20140224050256) do
 
-# Could not dump table "comments" because of following NoMethodError
-#   undefined method `[]' for nil:NilClass
-
   create_table "posts", force: true do |t|
     t.string   "title"
     t.text     "body"
